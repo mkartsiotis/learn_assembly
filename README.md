@@ -6,7 +6,7 @@ The project will be updated on a merely weekly basis and later as we progress wi
 _Diary:_ 
 **Day 1:**
 This is my first time getting into grips with assembly! Very useful for producing assembly from the C programming language is using the -S compiler flag to output the .s assembly file that will be used later for undersatnding the syntax and the logic.
-I created some examples, which are not the simplest, but starting from the simple_return.c and simple_return.s we can interpret the basic commands:
+I created some examples, which are not the simplest, but starting from the simple_return.c and simple_return.s we can interpret the basic commands:  
 1.pushq %rbp: Saves the old based pointer   
 2.moveq %rsp %rbp: Sets the current stack pointer as the new base(referece point for future calls)  
 3.movl a b: Moves(copies) something from a to b. We can see multiple times(in the simple examples) that OFFSET($rbp) means we call the register with offset OFFSET from the stack pointer rbp and %eax is a register with 32 bits of capacity. It is a subsystem of rax which is the full 64-bit register. Note that  %ax is 16-bit and %al/%ah refers to the 8-bit subregister of rax. The computer uses the %eax subregister since we used an integer variable(32 bits).

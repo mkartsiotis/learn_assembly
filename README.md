@@ -13,4 +13,4 @@ I created some examples, which are not the simplest, but starting from the simpl
 As a first day conclusion it is obvious that modern assembly is serious, complex and sometimes difficult to understand.
 It is obvious that the first contact with assembly should not be x86 but RISK or MIPS assembly and this is the way forward. First we need to understand the simple lw, pw, add, mul commands and then procced to modern architecture. Then as we climb the assembly ladder together we can look at modern assembly in parallel, compare and contrast them and then use our knowledge to make something useful since this is what consists the engineer's proffession.
 So until next time, be excellenty to each other!!!
-WARNING: SINCE THIS PROJECT IS IN PROGRESS NOTE THAT THE AUTHOR MAY MAKE MISTAKES. IN SUCH CASES DO NOT HASITATE TO CREATE AN ISSUE SO THAT YOU CAN CONTRIBUTE TO THE PROJECT.
+WARNING: SINCE THIS PROJECT IS IN PROGRESS NOTE THAT THE AUTHOR MAY MAKE MISTAKES. IN SUCH CASES DO NOT HESITATE TO CREATE AN ISSUE SO THAT YOU CAN CONTRIBUTE TO THE PROJECT.

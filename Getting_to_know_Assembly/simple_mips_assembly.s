@@ -1,0 +1,48 @@
+	.abicalls
+	.section	.mdebug.abi32,"",@progbits
+	.nan	legacy
+	.module	fp=xx
+	.module	nooddspreg
+	.text
+	.file	"simple_return.c"
+	.globl	main                            # -- Begin function main
+	.p2align	2
+	.type	main,@function
+	.set	nomicromips
+	.set	nomips16
+	.ent	main
+main:                                   # @main
+	.frame	$fp,16,$ra
+	.mask 	0xc0000000,-4
+	.fmask	0x00000000,0
+	.set	noreorder
+	.set	nomacro
+	.set	noat
+# %bb.0:
+	addiu	$sp, $sp, -16
+	sw	$ra, 12($sp)                    # 4-byte Folded Spill
+	sw	$fp, 8($sp)                     # 4-byte Folded Spill
+	move	$fp, $sp
+	addiu	$1, $zero, 0
+	sw	$zero, 4($fp)
+	addiu	$1, $zero, 2
+	sw	$1, 0($fp)
+	lw	$1, 0($fp)
+	sll	$2, $1, 1
+	move	$sp, $fp
+	lw	$fp, 8($sp)                     # 4-byte Folded Reload
+	lw	$ra, 12($sp)                    # 4-byte Folded Reload
+	addiu	$sp, $sp, 16
+	jr	$ra
+	nop
+	.set	at
+	.set	macro
+	.set	reorder
+	.end	main
+$func_end0:
+	.size	main, $func_end0-main
+                                        # -- End function
+	.ident	"clang version 21.1.8"
+	.section	".note.GNU-stack","",@progbits
+	.addrsig
+	.text
